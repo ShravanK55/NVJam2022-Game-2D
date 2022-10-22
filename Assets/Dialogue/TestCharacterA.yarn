@@ -1,0 +1,11 @@
+﻿title: TestCharacterA
+tags:
+---
+A: Hello! Welcome to the party.
+A: What's your name?
+===
+
+title: TestCharacterAIsSuspicious
+---
+A: I don't like B's yellow clothing.
+===
