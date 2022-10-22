@@ -2,5 +2,10 @@
 tags:
 ---
 B: Hey what's up?
-B: How are you doing?
+<<if $talkedToA == 0>>
+	B: How are you doing?
+<<elseif $talkedToA == 1>>
+	B: Oh, you have already talked to A.
+	B: What did he tell you?
+<<endif>>
 ===

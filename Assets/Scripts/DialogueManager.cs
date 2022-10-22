@@ -22,5 +22,9 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueRunner.StartDialogue(characterStartNodes[0]);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            dialogueRunner.StartDialogue(characterStartNodes[1]);
+        }
     }
 }

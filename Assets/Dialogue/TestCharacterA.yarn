@@ -2,7 +2,16 @@
 tags:
 ---
 A: Hello! Welcome to the party.
-A: What's your name?
+<<if $talkedToA == 0>>
+	A: What's your name?
+	-> Option 1
+		You chose option 1
+	-> Option 2
+		You chose option 2
+	<<set $talkedToA to 1>>
+<<elseif $talkedToA == 1>>
+	A: I have already talked to you.
+<<endif>>
 ===
 
 title: TestCharacterAIsSuspicious
