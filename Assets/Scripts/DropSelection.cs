@@ -7,6 +7,7 @@ public class DropSelection : MonoBehaviour, IDropHandler
 {
     [SerializeField] private TabGroup tabGroup;
     private Image image;
+    private string selection;
 
     private void Awake()
     {
@@ -20,6 +21,12 @@ public class DropSelection : MonoBehaviour, IDropHandler
         if (RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition))
         {
             image.sprite = tabGroup.selectedSprite;
+            selection = tabGroup.selectedPersonName;
         }
+    }
+
+    public string GetSelection()
+    {
+        return selection;
     }
 }
