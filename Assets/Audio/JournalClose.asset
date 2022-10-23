@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f597e873937931bf926759c8dd1bae2, type: 3}
+  m_Name: JournalClose
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  randomClips:
+  - {fileID: 8300000, guid: dfe28d118b30b46e69572cfb12662a9a, type: 3}
+  - {fileID: 8300000, guid: e2a1dd97e608537cb9531fb6a25c8d1d, type: 3}
+  mixer: {fileID: -5376775652958728417, guid: 773613f63e87fabd38526acb0d055f2b, type: 2}
+  loop: 0
+  volume: 1
+  pitch: 1

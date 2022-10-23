@@ -17,6 +17,9 @@ public class Journal : MonoBehaviour
     [SerializeField] private TextMeshProUGUI text4;
     [SerializeField] private TextMeshProUGUI text5;
     [SerializeField] private TextMeshProUGUI text6;
+    
+    [SerializeField] private AudioAsset journalOpenSfx;
+    [SerializeField] private AudioAsset journalCloseSfx;
 
 
     // Start is called before the first frame update
@@ -68,8 +71,15 @@ public class Journal : MonoBehaviour
     // called when journal button is clicked
     public void OnClick()
     {
+        if (journal.activeSelf)
+        {
+            AudioManager.Instance.Play(journalCloseSfx);
+        }
+        else
+        {
+            AudioManager.Instance.Play(journalOpenSfx);
+        }
         journal.SetActive(!journal.activeSelf);
-
     }
 
     public void Redraw(int input)

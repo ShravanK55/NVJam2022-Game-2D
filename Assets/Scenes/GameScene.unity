@@ -4316,7 +4316,8 @@ MonoBehaviour:
   guestList: {fileID: 708267833}
   row1Buttons: {fileID: 1191828906}
   row2Buttons: {fileID: 806368254}
-  journalOpenSfx: {fileID: 11400000, guid: 8abc1dd2a71fc63a386bd97fb8f06a52, type: 2}
+  journalTabSwitchSfx: {fileID: 11400000, guid: 24d8166661264515cbbb7138a75bcc46,
+    type: 2}
   selectedSprite: {fileID: 0}
 --- !u!1 &1077564276
 GameObject:
@@ -7127,6 +7128,8 @@ MonoBehaviour:
   text4: {fileID: 853123055}
   text5: {fileID: 1909696528}
   text6: {fileID: 2003093446}
+  journalOpenSfx: {fileID: 11400000, guid: 8abc1dd2a71fc63a386bd97fb8f06a52, type: 2}
+  journalCloseSfx: {fileID: 11400000, guid: b65b07aa119fcd574a40ed32ec5f2add, type: 2}
 --- !u!224 &1787026787
 RectTransform:
   m_ObjectHideFlags: 0

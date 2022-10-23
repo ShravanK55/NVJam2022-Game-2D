@@ -17,7 +17,7 @@ public class TabGroup : MonoBehaviour
     public RectTransform row1Buttons;
     public RectTransform row2Buttons;
     private bool displaying;
-    [SerializeField] private AudioAsset journalOpenSfx;
+    [SerializeField] private AudioAsset journalTabSwitchSfx;
 
     [HideInInspector] public Sprite selectedSprite;
 
@@ -55,7 +55,7 @@ public class TabGroup : MonoBehaviour
     
     private void DisplayTab(int index)
     {
-        AudioManager.Instance.Play(journalOpenSfx);
+        AudioManager.Instance.Play(journalTabSwitchSfx);
         if (!displaying && index >= 0 && index < objectsToSwap.Count)
         {
             var row1Midway = new Vector2(0, 300);
