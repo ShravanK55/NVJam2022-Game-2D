@@ -123,6 +123,18 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!114 &8977787 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
+    type: 3}
+  m_PrefabInstance: {fileID: 338404539}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &19706703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1849,6 +1861,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
         type: 3}
+      propertyPath: m_fontSize
+      value: 48
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
+        type: 3}
       propertyPath: m_margin.x
       value: 107.419556
       objectReference: {fileID: 0}
@@ -1871,6 +1888,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 48
       objectReference: {fileID: 0}
     - target: {fileID: 7778558434976753272, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
         type: 3}
@@ -10932,6 +10954,11 @@ PrefabInstance:
       objectReference: {fileID: 1787026786}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
+      propertyPath: dialogueText
+      value: 
+      objectReference: {fileID: 8977787}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
       propertyPath: choiceNoiseRef
       value: 
       objectReference: {fileID: 1787026786}
@@ -10992,9 +11019,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
+      propertyPath: spriteMappings.Array.data[0].font
+      value: 
+      objectReference: {fileID: 11400000, guid: a45fbfbac8752fe84aae52bf6d12cfc4,
+        type: 2}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
       propertyPath: spriteMappings.Array.data[0].name
       value: Amelia
       objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: spriteMappings.Array.data[1].font
+      value: 
+      objectReference: {fileID: 11400000, guid: a3f186c9c9494e126b9fc384b20137d8,
+        type: 2}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
       propertyPath: spriteMappings.Array.data[1].name
@@ -11002,9 +11041,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
+      propertyPath: spriteMappings.Array.data[2].font
+      value: 
+      objectReference: {fileID: 11400000, guid: 4830feea4733ecadcbf1df3adc88677f,
+        type: 2}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
       propertyPath: spriteMappings.Array.data[2].name
       value: John
       objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: spriteMappings.Array.data[3].font
+      value: 
+      objectReference: {fileID: 11400000, guid: 89024626641fed95ba642f39eb711192,
+        type: 2}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
       propertyPath: spriteMappings.Array.data[3].name
@@ -11012,9 +11063,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
+      propertyPath: spriteMappings.Array.data[4].font
+      value: 
+      objectReference: {fileID: 11400000, guid: 5d4b84ef6d9e3fe7da70f68e7165ed5d,
+        type: 2}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
       propertyPath: spriteMappings.Array.data[4].name
       value: Ryan
       objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: spriteMappings.Array.data[5].font
+      value: 
+      objectReference: {fileID: 11400000, guid: b42ade90a3ac66074a6ea7cdc3e9ff3b,
+        type: 2}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
       propertyPath: spriteMappings.Array.data[5].name

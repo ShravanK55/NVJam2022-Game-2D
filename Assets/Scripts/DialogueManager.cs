@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 using Yarn.Unity;
@@ -9,6 +10,7 @@ using static Yarn.Unity.DialogueRunner;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private DialogueRunner dialogueRunner;
+    [SerializeField] private TextMeshProUGUI dialogueText;
 
     [SerializeField] private GameObject button;
 
@@ -19,6 +21,7 @@ public class DialogueManager : MonoBehaviour
 
     [SerializeField] private NameSpriteMapping[] spriteMappings;
     private Dictionary<string, Sprite> characterSprites;
+    private Dictionary<string, TMP_FontAsset> characterFonts;
     [SerializeField] private Image speakingCharacter;
 
     [SerializeField] private AudioAsset crowdSfx;
@@ -29,11 +32,13 @@ public class DialogueManager : MonoBehaviour
     {
         public string name;
         public Sprite person;
+        public TMP_FontAsset font;
 
-        public NameSpriteMapping(string name, Sprite person)
+        public NameSpriteMapping(string name, Sprite person, TMP_FontAsset font)
         {
             this.name = name;
             this.person = person;
+            this.font = font;
         }
     }
 
@@ -52,6 +57,11 @@ public class DialogueManager : MonoBehaviour
         foreach (var kp in spriteMappings)
         {
             characterSprites[kp.name] = kp.person;
+        }
+        characterFonts = new Dictionary<string, TMP_FontAsset>();
+        foreach (var kp in spriteMappings)
+        {
+            characterFonts[kp.name] = kp.font;
         }
     }
 
@@ -98,6 +108,7 @@ public class DialogueManager : MonoBehaviour
     public void SetSpeaker(string name)
     {
         speakingCharacter.sprite = characterSprites[name];
+        dialogueText.font = characterFonts[name];
     }
 
     void ReactivateTab()

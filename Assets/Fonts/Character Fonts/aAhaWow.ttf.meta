@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: ebd1cfd570ee86613b2aebc182d20d42
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - a Aha Wow
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 21a4cf4b12f26aa7baacd84661a660b0, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
