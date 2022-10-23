@@ -7,7 +7,7 @@ public class Journal : MonoBehaviour
 {
     [SerializeField] private GameObject journal;
 
-    private Dictionary<string, List<string>> myDict = new Dictionary<string, List<string>>();
+    private Dictionary<string, HashSet<string>> myDict = new Dictionary<string, HashSet<string>>();
 
     [SerializeField] private JournalPage[] pages;
     
@@ -32,28 +32,22 @@ public class Journal : MonoBehaviour
     {
         if (myDict.ContainsKey(key) == false)
         {
-            List<string> addList = new List<string>();
+            HashSet<string> addList = new HashSet<string>();
             myDict.Add(key, addList);
         }
         AudioManager.Instance.Play(journalUpdateSfx); // plays when a new value gets appended.
-        Debug.Log("update");
         myDict[key].Add(value);
         string result = "";
-        for (int i = 0; i < myDict[key].Count; i++)
+        foreach (var s in myDict[key])
         {
-            result += myDict[key][i];
-            if (i < myDict[key].Count - 1)
-            {
-                result += "\n";
-            }
+            result += s + "\n";
         }
-
-        Debug.Log(result);
+        result = result.Substring(0, result.Length - 1);
+        
         foreach (var note in pages)
         {
             if (note.associatedPerson == key)
             {
-                Debug.Log("found");
                 note.OverwriteNotes(result);
                 break;
             }
