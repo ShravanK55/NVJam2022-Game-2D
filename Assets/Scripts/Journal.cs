@@ -35,7 +35,7 @@ public class Journal : MonoBehaviour
             List<string> addList = new List<string>();
             myDict.Add(key, addList);
         }
-        AudioManager.Instance.Play(journalUpdateSfx);
+        AudioManager.Instance.Play(journalUpdateSfx); // plays when a new value gets appended.
         myDict[key].Add(value);
         string result = "";
         for (int i = 0; i < myDict[key].Count; i++)
