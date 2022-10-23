@@ -1,0 +1,10 @@
+﻿title: Ryan
+tags:
+---
+<<if $talkedtoChris && $talkedtoRyan>>
+    Chris doesn't seem to eat meat, so I assume he's veggie like me. That's the only reason why I found him more approachable despite our polarized personalities.
+<<else>>
+    Good evening, delighted to make your aquaintance. I did a full face of TikTok makeup trends - hope you like it.
+<<endif>>
+<<set $talkedtoRyan to true>>
+===

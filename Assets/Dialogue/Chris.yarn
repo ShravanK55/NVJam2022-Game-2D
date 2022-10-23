@@ -1,0 +1,10 @@
+﻿title: Chris
+tags:
+---
+<<if $talkedtoRyan && $talkedtoChris>>
+    Ryan's my homie - I notice he eats carbs only like me! Rice, bread, pasta...he knows what's up.
+<<else>>
+    Yo, how's everyone doing? Where my carbs at!
+<<endif>>
+<<set $talkedtoChris to true>>
+===

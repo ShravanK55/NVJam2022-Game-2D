@@ -1,0 +1,127 @@
+fileFormatVersion: 2
+guid: 5ca6b061c2e4541a0aafc679ca942e14
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 053561912b1654d80a424bb0696a74ae, type: 3}
+  sourceScripts:
+  - {fileID: 6391573757903218779, guid: 0c8553ae0c5ec40e8939757e4cbf8343, type: 3}
+  - {fileID: 6391573757903218779, guid: 66db3300eb9974701b37487140413739, type: 3}
+  - {fileID: 6391573757903218779, guid: 5c932b1cfcc5b491ba4c402f299da67c, type: 3}
+  - {fileID: 6391573757903218779, guid: a4031b697d3734c0eb69cb9cc7a7e1e6, type: 3}
+  - {fileID: 6391573757903218779, guid: c862c519be294446680fd7fef197dd39, type: 3}
+  - {fileID: 6391573757903218779, guid: d09eb3638e85240c899912b20e2f2af1, type: 3}
+  compileErrors: []
+  serializedDeclarations:
+  - name: $talkedtoLinda
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Amelia.yarn, node Amelia
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 0c8553ae0c5ec40e8939757e4cbf8343,
+      type: 3}
+  - name: $talkedtoAmelia
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Amelia.yarn, node Amelia
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 0c8553ae0c5ec40e8939757e4cbf8343,
+      type: 3}
+  - name: $talkedtoRyan
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Chris.yarn, node Chris
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 66db3300eb9974701b37487140413739,
+      type: 3}
+  - name: $talkedtoChris
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in Chris.yarn, node Chris
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 66db3300eb9974701b37487140413739,
+      type: 3}
+  - name: $talkedtoSteve
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in John.yarn, node John
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 5c932b1cfcc5b491ba4c402f299da67c,
+      type: 3}
+  - name: $talkedtoJohn
+    typeName: Bool
+    defaultValueBool: 0
+    defaultValueNumber: 0
+    defaultValueString: 
+    description: Implicitly declared in John.yarn, node John
+    isImplicit: 1
+    sourceYarnAsset: {fileID: 6391573757903218779, guid: 5c932b1cfcc5b491ba4c402f299da67c,
+      type: 3}
+  defaultLanguage: en-HK
+  languagesToSourceAssets: []
+  useAddressableAssets: 0
+  searchAllAssembliesForActions: 1
+  assembliesToSearch: []
+  ListOfFunctions:
+  - Name: Random
+    ReturnType: -> Single
+    Parameters: []
+  - Name: RandomRange
+    ReturnType: -> Single
+    Parameters:
+    - minInclusive
+    - maxInclusive
+  - Name: Dice
+    ReturnType: -> Int32
+    Parameters:
+    - sides
+  - Name: Round
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: RoundPlaces
+    ReturnType: -> Single
+    Parameters:
+    - num
+    - places
+  - Name: Floor
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Ceil
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Inc
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Dec
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: Decimal
+    ReturnType: -> Single
+    Parameters:
+    - num
+  - Name: Int
+    ReturnType: -> Int32
+    Parameters:
+    - num
+  - Name: CoolFunction
+    ReturnType: -> Int32
+    Parameters: []

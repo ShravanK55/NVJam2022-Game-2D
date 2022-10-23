@@ -1,9 +1,9 @@
 ﻿title: TestCharacterA
 tags:
 ---
-A: Hello! Welcome to the party.
+A: Yo, how's everyone doing? Where my carbs at!
 <<if $talkedToA == 0>>
-	A: What's your name?
+	A: Hello.
 	-> Option 1
 		You chose option 1
 	-> Option 2

@@ -26,5 +26,21 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueRunner.StartDialogue(characterStartNodes[1]);
         }
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            dialogueRunner.StartDialogue(characterStartNodes[2]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            dialogueRunner.StartDialogue(characterStartNodes[3]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            dialogueRunner.StartDialogue(characterStartNodes[4]);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            dialogueRunner.StartDialogue(characterStartNodes[5]);
+        }
     }
 }
