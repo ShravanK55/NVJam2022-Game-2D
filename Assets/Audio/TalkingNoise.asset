@@ -10,14 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8f597e873937931bf926759c8dd1bae2, type: 3}
-  m_Name: JournalTabSwitch
+  m_Name: TalkingNoise
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
-  randomClips:
-  - {fileID: 8300000, guid: 15fd518d731db7131bbd10224178e47f, type: 3}
-  - {fileID: 8300000, guid: bf127d18f9aaace64ae2c32401779c1c, type: 3}
-  - {fileID: 8300000, guid: b2e4929f3cd9c82c8b4c061633e4b9be, type: 3}
-  - {fileID: 8300000, guid: d7d10785531f4beff9da49998c28f48a, type: 3}
+  clip: {fileID: 8300000, guid: fb69bc467bfd96ef8bfe479036cd020a, type: 3}
+  randomClips: []
   mixer: {fileID: -5376775652958728417, guid: 773613f63e87fabd38526acb0d055f2b, type: 2}
   loop: 0
   volume: 1

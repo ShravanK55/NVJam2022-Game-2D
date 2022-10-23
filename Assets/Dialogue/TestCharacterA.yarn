@@ -1,13 +1,16 @@
 ﻿title: TestCharacterA
 tags:
 ---
+<<makeNoise "" "talkingNoise">>
 A: Yo, how's everyone doing? Where my carbs at!
 <<if $talkedToA == 0>>
 	A: What's your name?
 	<<journal "Ryan" "this is a hint">> 
 	-> Option 1
+		<<makeNoise "" "choiceNoise">>
 		You chose option 1
 	-> Option 2
+		<<makeNoise "" "choiceNoise">>
 		You chose option 2
 	<<set $talkedToA to 1>>
 <<elseif $talkedToA == 1>>
