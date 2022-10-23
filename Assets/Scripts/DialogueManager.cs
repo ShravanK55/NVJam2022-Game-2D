@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     private Dictionary<string, Sprite> characterSprites;
     [SerializeField] private Image speakingCharacter;
 
+    [SerializeField] private AudioAsset crowdSfx;
+    private int crowdSfxChannel;
+
     [Serializable]
     private class NameSpriteMapping
     {
@@ -37,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     void Awake()
     {
         dialogueRunner.onNodeStart.AddListener(journalRef.HideIfNeeded);
+        dialogueRunner.onNodeStart.AddListener(FocusOnSpeaker);
+        dialogueRunner.onDialogueComplete.AddListener(UnfocusOffSpeaker);
         dialogueRunner.onDialogueComplete.AddListener(ReactivateTab); // The onDialogueComplete unityevnt will be invoked when a dialogue ends.
 
         dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
@@ -49,7 +54,12 @@ public class DialogueManager : MonoBehaviour
             characterSprites[kp.name] = kp.person;
         }
     }
-    
+
+    private void Start()
+    {
+        crowdSfxChannel = AudioManager.Instance.Play(crowdSfx);
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -93,5 +103,28 @@ public class DialogueManager : MonoBehaviour
     void ReactivateTab()
     {
         button.SetActive(true);
+    }
+
+    private void FocusOnSpeaker(string arg0)
+    {
+        StartCoroutine(FadeCrowdSfx(1, 0.25f, 1.5f));
+    }
+
+    private void UnfocusOffSpeaker()
+    {
+        StartCoroutine(FadeCrowdSfx(0.25f, 1f, 1.5f));
+    }
+
+    private IEnumerator FadeCrowdSfx(float start, float end, float time)
+    {
+        float timer = 0f;
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            var vol = Mathf.Lerp(start, end, timer / time);
+            AudioManager.Instance.SetVolume("AmbienceVolume", vol);
+            yield return null;
+        }
+        AudioManager.Instance.SetVolume("AmbienceVolume", end);
     }
 }
