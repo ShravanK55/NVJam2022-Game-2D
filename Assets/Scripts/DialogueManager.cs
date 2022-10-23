@@ -21,6 +21,9 @@ public class DialogueManager : MonoBehaviour
     private Dictionary<string, Sprite> characterSprites;
     [SerializeField] private Image speakingCharacter;
 
+    [SerializeField] private AudioAsset crowdSfx;
+    private int crowdSfxChannel;
+
     [Serializable]
     private class NameSpriteMapping
     {
@@ -37,6 +40,8 @@ public class DialogueManager : MonoBehaviour
     void Awake()
     {
         dialogueRunner.onNodeStart.AddListener(journalRef.HideIfNeeded);
+        dialogueRunner.onNodeStart.AddListener(FocusOnSpeaker);
+        dialogueRunner.onDialogueComplete.AddListener(UnfocusOffSpeaker);
         dialogueRunner.onDialogueComplete.AddListener(ReactivateTab); // The onDialogueComplete unityevnt will be invoked when a dialogue ends.
 
         dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
@@ -49,40 +54,45 @@ public class DialogueManager : MonoBehaviour
             characterSprites[kp.name] = kp.person;
         }
     }
-    
+
+    private void Start()
+    {
+        crowdSfxChannel = AudioManager.Instance.Play(crowdSfx);
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[0]);
+            StartDialogue(characterStartNodes[0]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[1]);
+            StartDialogue(characterStartNodes[1]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[2]);
+            StartDialogue(characterStartNodes[2]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[3]);
+            StartDialogue(characterStartNodes[3]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[4]);
+            StartDialogue(characterStartNodes[4]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[5]);
+            StartDialogue(characterStartNodes[5]);
         }
+    }
+
+    public void StartDialogue(string characterName)
+    {
+        button.SetActive(false); // disable tab when dialogue starts
+        dialogueRunner.StartDialogue(characterName);
     }
 
     public void SetSpeaker(string name)
@@ -93,5 +103,28 @@ public class DialogueManager : MonoBehaviour
     void ReactivateTab()
     {
         button.SetActive(true);
+    }
+
+    private void FocusOnSpeaker(string arg0)
+    {
+        StartCoroutine(FadeCrowdSfx(1, 0.25f, 1.5f));
+    }
+
+    private void UnfocusOffSpeaker()
+    {
+        StartCoroutine(FadeCrowdSfx(0.25f, 1f, 1.5f));
+    }
+
+    private IEnumerator FadeCrowdSfx(float start, float end, float time)
+    {
+        float timer = 0f;
+        while (timer < time)
+        {
+            timer += Time.deltaTime;
+            var vol = Mathf.Lerp(start, end, timer / time);
+            AudioManager.Instance.SetVolume("AmbienceVolume", vol);
+            yield return null;
+        }
+        AudioManager.Instance.SetVolume("AmbienceVolume", end);
     }
 }
