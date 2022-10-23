@@ -7,6 +7,8 @@ public class DialogueManager : MonoBehaviour
 {
     [SerializeField] private DialogueRunner dialogueRunner;
 
+    [SerializeField] private Journal journalRef;
+
     [SerializeField] private string[] characterStartNodes;
     
     // Start is called before the first frame update
@@ -15,6 +17,10 @@ public class DialogueManager : MonoBehaviour
         
     }
 
+    void Awake()
+    {
+        dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,5 +32,11 @@ public class DialogueManager : MonoBehaviour
         {
             dialogueRunner.StartDialogue(characterStartNodes[1]);
         }
+    }
+
+    void Redraw(int currPage)
+    {
+
+
     }
 }

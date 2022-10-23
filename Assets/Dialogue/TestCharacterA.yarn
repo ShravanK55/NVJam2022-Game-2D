@@ -4,6 +4,7 @@ tags:
 A: Hello! Welcome to the party.
 <<if $talkedToA == 0>>
 	A: What's your name?
+	<<journal "Ryan" "this is a hint">> 
 	-> Option 1
 		You chose option 1
 	-> Option 2

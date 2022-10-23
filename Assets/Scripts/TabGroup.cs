@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,7 @@ public class TabGroup : MonoBehaviour
     public Sprite tabActive;
     public TabButton selectedTab;
     public List<GameObject> objectsToSwap;
+    public Action<int> mAction;
     
     public void Subscribe(TabButton button)
     {
@@ -52,6 +54,7 @@ public class TabGroup : MonoBehaviour
                 objectsToSwap[i].SetActive(false);
             }
         }
+        mAction?.Invoke(index);
     }
 
     public void ResetTabs()
