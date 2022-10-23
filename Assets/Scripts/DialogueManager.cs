@@ -65,34 +65,34 @@ public class DialogueManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[0]);
+            StartDialogue(characterStartNodes[0]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha2))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[1]);
+            StartDialogue(characterStartNodes[1]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha3))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[2]);
+            StartDialogue(characterStartNodes[2]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha4))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[3]);
+            StartDialogue(characterStartNodes[3]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha5))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[4]);
+            StartDialogue(characterStartNodes[4]);
         }
         if (Input.GetKeyDown(KeyCode.Alpha6))
         {
-            button.SetActive(false); // disable tab when dialogue starts
-            dialogueRunner.StartDialogue(characterStartNodes[5]);
+            StartDialogue(characterStartNodes[5]);
         }
+    }
+
+    public void StartDialogue(string characterName)
+    {
+        button.SetActive(false); // disable tab when dialogue starts
+        dialogueRunner.StartDialogue(characterName);
     }
 
     public void SetSpeaker(string name)
