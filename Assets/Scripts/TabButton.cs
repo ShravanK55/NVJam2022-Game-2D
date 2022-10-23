@@ -11,6 +11,8 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public Image background;
 
+    public int index;
+
     public void OnPointerClick(PointerEventData eventData)
     {
         tabGroup.OnTabSelected(this);
