@@ -15,8 +15,8 @@ public class DropSelection : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        if (!tabGroup.selectedSprite) return;
         RectTransform panel = transform as RectTransform;
-
         if (RectTransformUtility.RectangleContainsScreenPoint(panel, Input.mousePosition))
         {
             image.sprite = tabGroup.selectedSprite;

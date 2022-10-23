@@ -1,8 +1,6 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Globalization;
-using TMPro;
 using UnityEngine;
 
 public class Journal : MonoBehaviour
@@ -39,6 +37,10 @@ public class Journal : MonoBehaviour
         for (int i = 0; i < myDict[key].Count; i++)
         {
             result += myDict[key][i];
+            if (i < myDict[key].Count - 1)
+            {
+                result += "\n";
+            }
         }
         foreach (var note in pages)
         {

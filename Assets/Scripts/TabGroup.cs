@@ -21,6 +21,7 @@ public class TabGroup : MonoBehaviour
     [SerializeField] private AudioAsset journalTabSwitchSfx;
 
     [HideInInspector] public Sprite selectedSprite;
+    [HideInInspector] public string selectedPersonName;
 
     public void Subscribe(TabButton button)
     {
@@ -63,7 +64,7 @@ public class TabGroup : MonoBehaviour
             var row1End = new Vector2(265, 300);
             var row2Midway = new Vector2(0, 0);
             var row2End = new Vector2(400, 0);
-            float guestListEnd = 1280;
+            float guestListEnd = 760;
             DOTween.To(() => row1Buttons.anchoredPosition,
                     pos => row1Buttons.anchoredPosition = pos,
                     row1Midway, 0.15f)
@@ -99,9 +100,9 @@ public class TabGroup : MonoBehaviour
         }
         for (int i = 0; i < objectsToSwap.Count; ++i)
         {
+            var i1 = i;
             if (i == index)
             {
-                var i1 = i;
                 objectsToSwap[i1].gameObject.SetActive(true);
                 DOTween.To(() => objectsToSwap[i1].anchoredPosition.y,
                         y => objectsToSwap[i1].anchoredPosition = new Vector2(objectsToSwap[i1].anchoredPosition.x, y),
@@ -110,7 +111,6 @@ public class TabGroup : MonoBehaviour
             }
             else
             {
-                var i1 = i;
                 DOTween.To(() => objectsToSwap[i1].anchoredPosition.y,
                         y => objectsToSwap[i1].anchoredPosition = new Vector2(objectsToSwap[i1].anchoredPosition.x, y),
                         -600, 0.2f)

@@ -19,7 +19,7 @@ public class JournalPage : MonoBehaviour
     {
         image.enabled = true;
         image.sprite = sprite;
-        backgroundImage.color = Color.white;
+        backgroundImage.color = new Color(0.75f, 0.75f, 0.75f);
     }
 
     public void OverwriteNotes(string notes)
