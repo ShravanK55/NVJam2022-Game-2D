@@ -19,6 +19,8 @@ public class TabGroup : MonoBehaviour
     private bool displaying;
     [SerializeField] private AudioAsset journalOpenSfx;
 
+    [HideInInspector] public Sprite selectedSprite;
+
     public void Subscribe(TabButton button)
     {
         if (tabButtons == null)
