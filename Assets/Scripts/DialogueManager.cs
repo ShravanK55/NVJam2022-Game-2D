@@ -13,7 +13,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private GameObject button;
 
     [SerializeField] private Journal journalRef;
-    [SerializeField] private Journal noiseRef;
+    [SerializeField] private NoiseMaker noiseRef;
 
     [SerializeField] private string[] characterStartNodes;
 

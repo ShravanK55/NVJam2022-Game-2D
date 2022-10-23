@@ -5642,6 +5642,58 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseHoverSfx: {fileID: 11400000, guid: b82f0c3b901ec2b4db50a10cbf8f918e, type: 2}
+--- !u!1 &1120472405
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1120472407}
+  - component: {fileID: 1120472406}
+  m_Layer: 0
+  m_Name: NoiseMaker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1120472406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120472405}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b655cf35df00e0441a7cdad37331f5a4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choiceNoiseSfx: {fileID: 11400000, guid: 5d2ccfe8cdc1778458b7d0d93af1ed4d, type: 2}
+  talkingNoiseSfx: {fileID: 11400000, guid: fa6cac05508744343beac22d21f4b68d, type: 2}
+  lindaNoiseSfx: {fileID: 11400000, guid: 309328f96a97995438d370f5852abf65, type: 2}
+  johnNoiseSfx: {fileID: 11400000, guid: 0e9f5baa4009f6c46a06bbd67022f1c8, type: 2}
+  steveNoiseSfx: {fileID: 11400000, guid: c1c13af616688ed4e829dabc340c7cfe, type: 2}
+  ryanNoiseSfx: {fileID: 11400000, guid: 6481dd07d90b79a4d8acb6bd6e66b345, type: 2}
+  chrisNoiseSfx: {fileID: 11400000, guid: 6e0e8a9ceedc91647a07a2ad13d18b25, type: 2}
+  ameliaNoiseSfx: {fileID: 11400000, guid: 1e1243b66844aea44a98606322647fa5, type: 2}
+--- !u!4 &1120472407
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1120472405}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.5798812, y: 2.960953, z: 0.03762263}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1139652195
 GameObject:
   m_ObjectHideFlags: 0
@@ -8297,8 +8349,6 @@ MonoBehaviour:
   journalOpenSfx: {fileID: 11400000, guid: 8abc1dd2a71fc63a386bd97fb8f06a52, type: 2}
   journalCloseSfx: {fileID: 11400000, guid: b65b07aa119fcd574a40ed32ec5f2add, type: 2}
   journalUpdateSfx: {fileID: 11400000, guid: bb4481ebd2398f54a9b890fcb73a7f3e, type: 2}
-  choiceNoiseSfx: {fileID: 11400000, guid: 5d2ccfe8cdc1778458b7d0d93af1ed4d, type: 2}
-  talkingNoiseSfx: {fileID: 11400000, guid: fa6cac05508744343beac22d21f4b68d, type: 2}
 --- !u!224 &1787026787
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10924,7 +10974,7 @@ PrefabInstance:
         type: 3}
       propertyPath: noiseRef
       value: 
-      objectReference: {fileID: 1787026786}
+      objectReference: {fileID: 1120472406}
     - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
       propertyPath: journalRef
