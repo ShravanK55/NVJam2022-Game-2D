@@ -3,11 +3,14 @@ tags:
 ---
 <<setSpeaker John>>
 <<if $talkedtoSteve && $talkedtoJohn>>
+    <<makeNoise "John" "">>
     Seeing my ex-roommate Steve here spoiled my mood - don't worry, I won't spoil the fun but just so you know.
+    <<makeNoise "John" "">>
     You can play Zelda as a 'mobile' game if you have a Switch. Oh, Nintendo blessed people who don't play Genshin Impact.
     <<journal Steve "- Mushroom's ex-roommate">>
     <<journal Steve "- Mushroom doesn't like them">>
 <<else>>
+    <<makeNoise "John" "">>
     Hey, ask me something about Nintendo...what, Monster Hunter Rise? No, that's a Capcom game!
 <<endif>>
 <<set $talkedtoJohn to true>>

@@ -3,9 +3,11 @@ tags:
 ---
 <<setSpeaker Chris>>
 <<if $talkedtoRyan && $talkedtoChris>>
+    <<makeNoise "Chris" "">>
     Ryan's my homie - I notice he eats carbs only like me! Rice, bread, pasta...he knows what's up.
     <<journal Ryan "- seems to eat a lot of carbs">>
 <<else>>
+    <<makeNoise "Chris" "">>
     Yo, how's everyone doing? Where my carbs at!
 <<endif>>
 <<set $talkedtoChris to true>>
