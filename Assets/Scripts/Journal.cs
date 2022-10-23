@@ -36,6 +36,7 @@ public class Journal : MonoBehaviour
             myDict.Add(key, addList);
         }
         AudioManager.Instance.Play(journalUpdateSfx); // plays when a new value gets appended.
+        Debug.Log("update");
         myDict[key].Add(value);
         string result = "";
         for (int i = 0; i < myDict[key].Count; i++)
@@ -46,10 +47,13 @@ public class Journal : MonoBehaviour
                 result += "\n";
             }
         }
+
+        Debug.Log(result);
         foreach (var note in pages)
         {
             if (note.associatedPerson == key)
             {
+                Debug.Log("found");
                 note.OverwriteNotes(result);
                 break;
             }
@@ -68,6 +72,15 @@ public class Journal : MonoBehaviour
             AudioManager.Instance.Play(journalOpenSfx);
         }
         journal.SetActive(!journal.activeSelf);
+    }
+
+    public void HideIfNeeded(string arg0)
+    {
+        if (journal.activeSelf)
+        {
+            AudioManager.Instance.Play(journalCloseSfx);
+            journal.SetActive(false);
+        }
     }
 
     public void DiscoverPage(string name)

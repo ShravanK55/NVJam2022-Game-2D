@@ -36,6 +36,7 @@ public class DialogueManager : MonoBehaviour
 
     void Awake()
     {
+        dialogueRunner.onNodeStart.AddListener(journalRef.HideIfNeeded);
         dialogueRunner.onDialogueComplete.AddListener(ReactivateTab); // The onDialogueComplete unityevnt will be invoked when a dialogue ends.
 
         dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
