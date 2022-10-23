@@ -7,6 +7,9 @@ public class InitiateDialogue : MonoBehaviour
 {
     [SerializeField] private DialogueManager dialogueManager;
     [SerializeField] private string characterName;
+    [SerializeField] private GameObject journal;
+    [SerializeField] private GameObject pauseMenu;
+    [SerializeField] private GameObject winScreen;
     
     // Start is called before the first frame update
     void Start()
@@ -25,6 +28,9 @@ public class InitiateDialogue : MonoBehaviour
 
     private void OnMouseDown()
     {
-        dialogueManager.StartDialogue(characterName);
+        if (journal && !journal.activeSelf && pauseMenu && !pauseMenu.activeSelf && winScreen && !winScreen.activeSelf)
+        {
+            dialogueManager.StartDialogue(characterName);
+        }
     }
 }

@@ -3286,6 +3286,8 @@ GameObject:
   m_Component:
   - component: {fileID: 631362282}
   - component: {fileID: 631362283}
+  - component: {fileID: 631362285}
+  - component: {fileID: 631362284}
   m_Layer: 0
   m_Name: Amelia_Cute_0
   m_TagString: Untagged
@@ -3360,6 +3362,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &631362284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631362281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: Amelia
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &631362285
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 631362281}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.0266666, y: 6.3151464}
+    newSize: {x: 12.08, y: 18.94544}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.0266666, y: 6.3151464}
+  m_EdgeRadius: 0
 --- !u!1 &659462433
 GameObject:
   m_ObjectHideFlags: 0
@@ -3935,6 +3980,8 @@ GameObject:
   m_Component:
   - component: {fileID: 716653500}
   - component: {fileID: 716653501}
+  - component: {fileID: 716653503}
+  - component: {fileID: 716653502}
   m_Layer: 0
   m_Name: Steve_Cute_0
   m_TagString: Untagged
@@ -4009,6 +4056,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &716653502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716653499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: Steve
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &716653503
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 716653499}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.9866667, y: 6.4385157}
+    newSize: {x: 14.96, y: 19.315548}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 4.9866667, y: 6.4385157}
+  m_EdgeRadius: 0
 --- !u!1 &741261348
 GameObject:
   m_ObjectHideFlags: 0
@@ -4019,6 +4109,8 @@ GameObject:
   m_Component:
   - component: {fileID: 741261349}
   - component: {fileID: 741261350}
+  - component: {fileID: 741261352}
+  - component: {fileID: 741261351}
   m_Layer: 0
   m_Name: LindaChibi_0
   m_TagString: Untagged
@@ -4093,6 +4185,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &741261351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741261348}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: Linda
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &741261352
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 741261348}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8204088, y: 7.6949997}
+    newSize: {x: 15.281635, y: 30.779999}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8204088, y: 7.6949997}
+  m_EdgeRadius: 0
 --- !u!224 &750086275 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 7778558435068644803, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
@@ -4469,6 +4604,8 @@ GameObject:
   m_Component:
   - component: {fileID: 834501614}
   - component: {fileID: 834501615}
+  - component: {fileID: 834501617}
+  - component: {fileID: 834501616}
   m_Layer: 0
   m_Name: Ryan_Cutsie_0
   m_TagString: Untagged
@@ -4543,6 +4680,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &834501616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834501613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: Ryan
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &834501617
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 834501613}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 5.983333, y: 6.5666666}
+    newSize: {x: 3.59, y: 3.94}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.983333, y: 6.5666666}
+  m_EdgeRadius: 0
 --- !u!1001 &853123052
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8415,6 +8595,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1872986161}
   - component: {fileID: 1872986162}
+  - component: {fileID: 1872986164}
+  - component: {fileID: 1872986163}
   m_Layer: 0
   m_Name: John_Cute_0
   m_TagString: Untagged
@@ -8489,6 +8671,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1872986163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872986160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: John
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &1872986164
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1872986160}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.8566666, y: 6.595227}
+    newSize: {x: 11.57, y: 19.78568}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.8566666, y: 6.595227}
+  m_EdgeRadius: 0
 --- !u!1 &1885116495
 GameObject:
   m_ObjectHideFlags: 0
@@ -10516,6 +10741,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2140781797}
   - component: {fileID: 2140781798}
+  - component: {fileID: 2140781800}
+  - component: {fileID: 2140781799}
   m_Layer: 0
   m_Name: ChrisCute_0
   m_TagString: Untagged
@@ -10590,6 +10817,49 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2140781799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140781796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2da124b8ef03974c9fa36c279158dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueManager: {fileID: 3361402573792110803}
+  characterName: Chris
+  journal: {fileID: 893251256}
+  pauseMenu: {fileID: 716037432}
+  winScreen: {fileID: 2096379382}
+--- !u!61 &2140781800
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140781796}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 2.57, y: 7.05}
+    newSize: {x: 2.57, y: 7.05}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.57, y: 7.05}
+  m_EdgeRadius: 0
 --- !u!1 &2146224648
 GameObject:
   m_ObjectHideFlags: 0
@@ -10843,6 +11113,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ae6325a90da78f39865d67d3bfa3e33, type: 3}
+--- !u!114 &3361402573792110803 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+    type: 3}
+  m_PrefabInstance: {fileID: 3361402573792110802}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1604dd61ea3a96cbbb8d095c4a3740f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5392269531761280892
 PrefabInstance:
   m_ObjectHideFlags: 0
