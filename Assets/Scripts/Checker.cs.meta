@@ -3,7 +3,10 @@ guid: 1de103401d4ecc37199777e3ae030db5
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - winScreen: {instanceID: 0}
+  - incorrect: {fileID: 11400000, guid: c289c87e4748e17419c3f19740841351, type: 2}
+  - winning: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

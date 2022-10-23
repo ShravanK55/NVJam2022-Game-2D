@@ -9,6 +9,8 @@ public class Checker : MonoBehaviour
     [SerializeField] private string[] actualAnswers;
     [SerializeField] private bool win = false;
     public GameObject winScreen;
+    public AudioAsset incorrect;
+    public AudioAsset winning;
     
     // Start is called before the first frame update
     void Start()
@@ -30,9 +32,11 @@ public class Checker : MonoBehaviour
         {
             win = true;
             winScreen.SetActive(true);
+            AudioManager.Instance.Play(winning);
         }
         else
         {
+            AudioManager.Instance.Play(incorrect);
             win = false;
             winScreen.SetActive(false);
         }
