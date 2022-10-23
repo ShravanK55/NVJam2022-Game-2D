@@ -1,6 +1,7 @@
 ﻿title: Amelia
 tags:
 ---
+<<setSpeaker Amelia>>
 <<if $talkedtoLinda && $talkedtoAmelia>>
     Linda's a great friend. But...she can be a bit paranoid. She's been asking me to do her tarot readings EVERY morning. She's a really anxious person.
     <<journal Linda "- paranoid/anxious">>

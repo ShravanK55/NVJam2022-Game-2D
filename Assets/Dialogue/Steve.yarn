@@ -1,6 +1,7 @@
 ﻿title: Steve
 tags:
 ---
+<<setSpeaker Steve>>
 <<if $talkedtoJohn && $talkedtoSteve>>
     I'm not sure why but my ex-roommate has been avoiding me recently. He banned me from our private discord a few weeks ago but he still responds to my texts, so I think we're still friends.
     Genshin Impact is a great game. It's like I'm playing the same game as my ex-roommate but without having a Switch.

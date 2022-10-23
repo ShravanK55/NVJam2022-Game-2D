@@ -1,6 +1,7 @@
 ﻿title: Ryan
 tags:
 ---
+<<setSpeaker Ryan>>
 <<if $talkedtoChris && $talkedtoRyan>>
     Chris doesn't seem to eat meat, so I assume he's veggie like me. That's the only reason why I found him more approachable despite our polarized personalities.
     <<journal Chris "- doesn't seem to eat meat, might be veggie (or not)">>

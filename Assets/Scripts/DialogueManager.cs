@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using Yarn.Unity;
 
 public class DialogueManager : MonoBehaviour
@@ -10,18 +12,36 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private Journal journalRef;
 
     [SerializeField] private string[] characterStartNodes;
-    
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private NameSpriteMapping[] spriteMappings;
+    private Dictionary<string, Sprite> characterSprites;
+    [SerializeField] private Image speakingCharacter;
+
+    [Serializable]
+    private class NameSpriteMapping
     {
-        
+        public string name;
+        public Sprite person;
+
+        public NameSpriteMapping(string name, Sprite person)
+        {
+            this.name = name;
+            this.person = person;
+        }
     }
 
     void Awake()
     {
         dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
-        dialogueRunner.AddCommandHandler<string>("discover", journalRef.DiscoverPage);
+        dialogueRunner.AddCommandHandler<string>("setSpeaker", SetSpeaker);
+
+        characterSprites = new Dictionary<string, Sprite>();
+        foreach (var kp in spriteMappings)
+        {
+            characterSprites[kp.name] = kp.person;
+        }
     }
+    
     // Update is called once per frame
     void Update()
     {
@@ -51,9 +71,8 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    void Redraw(int currPage)
+    public void SetSpeaker(string name)
     {
-
-
+        speakingCharacter.sprite = characterSprites[name];
     }
 }

@@ -1,6 +1,7 @@
 ﻿title: John
 tags:
 ---
+<<setSpeaker John>>
 <<if $talkedtoSteve && $talkedtoJohn>>
     Seeing my ex-roommate Steve here spoiled my mood - don't worry, I won't spoil the fun but just so you know.
     You can play Zelda as a 'mobile' game if you have a Switch. Oh, Nintendo blessed people who don't play Genshin Impact.

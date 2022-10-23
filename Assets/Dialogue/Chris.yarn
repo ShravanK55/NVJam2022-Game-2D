@@ -1,6 +1,7 @@
 ﻿title: Chris
 tags:
 ---
+<<setSpeaker Chris>>
 <<if $talkedtoRyan && $talkedtoChris>>
     Ryan's my homie - I notice he eats carbs only like me! Rice, bread, pasta...he knows what's up.
     <<journal Ryan "- seems to eat a lot of carbs">>

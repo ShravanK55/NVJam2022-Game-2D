@@ -13,8 +13,6 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
     private Vector3 originalPosition;
     private Bounds originalBounds;
 
-    private bool dragging;
-
     private void Awake()
     {
         associatedSprite = GetComponent<Image>().sprite;
@@ -22,14 +20,11 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (tabGroup.displaying) return;
         transform.position = originalBounds.Contains(Input.mousePosition) ? originalPosition : Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        dragging = false;
-        if (tabGroup.displaying) return;
         transform.position = originalPosition;
         tabGroup.selectedSprite = null;
         tabGroup.selectedPersonName = "";
@@ -37,11 +32,9 @@ public class DragItem : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDrag
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-        dragging = true;
         originalPosition = transform.position;
         var r = (RectTransform) transform;
         originalBounds = new Bounds(r.position, r.rect.size / 2);
-        if (tabGroup.displaying) return;
         tabGroup.selectedSprite = associatedSprite;
         tabGroup.selectedPersonName = actualName;
     }
