@@ -6,7 +6,16 @@ public class MainMenuButtons : MonoBehaviour
 {
     public GameObject MainMenu;
     public GameObject CreditsMenu;
+    public GameObject CrossFadePanel;
     public string SceneName;
+
+    public Animator crossFade;
+
+    private void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        DontDestroyOnLoad(CrossFadePanel);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -14,10 +23,25 @@ public class MainMenuButtons : MonoBehaviour
         MainMenuButton();
     }
 
+    IEnumerator LoadFirstScene()
+    {
+        CrossFadePanel.SetActive(true);
+        crossFade.SetTrigger("Start"); // fade to black
+        yield return new WaitForSeconds(1f); 
+        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneName);
+
+        UnityEngine.SceneManagement.SceneManager.sceneLoaded += AfterLoad;
+        void AfterLoad (UnityEngine.SceneManagement.Scene scene, UnityEngine.SceneManagement.LoadSceneMode mode)
+        {
+            crossFade.SetTrigger("End"); // fade from black
+            Destroy(CrossFadePanel);
+            Destroy(this.gameObject);
+        }
+    }
     public void PlayNowButton()
     {
         // Play Now Button has been pressed, here you can initialize your game (For example Load a Scene called SceneName etc.)
-        UnityEngine.SceneManagement.SceneManager.LoadScene(SceneName);
+        StartCoroutine(LoadFirstScene());
     }
 
     public void CreditsButton()
@@ -32,5 +56,6 @@ public class MainMenuButtons : MonoBehaviour
         // Show Main Menu
         MainMenu.SetActive(true);
         CreditsMenu.SetActive(false);
+        CrossFadePanel.SetActive(false);
     }
 }
