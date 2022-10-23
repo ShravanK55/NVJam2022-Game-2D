@@ -1,25 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Checker : MonoBehaviour
 {
     [SerializeField] private DropSelection[] orderedSelections;
     [SerializeField] private string[] actualAnswers;
+    [SerializeField] private bool win = false;
+    public GameObject winScreen;
     
     // Start is called before the first frame update
     void Start()
     {
+        winScreen.SetActive(false);
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
+ 
+    }
+
+    public void OnClick()
+    {
+        //Debug.Log(IsCorrect());
+        if (IsCorrect())
         {
-            Debug.Log(IsCorrect());
+            win = true;
+            winScreen.SetActive(true);
         }
+        else
+        {
+            win = false;
+            winScreen.SetActive(false);
+        }
+
+
     }
 
     public bool IsCorrect()
