@@ -16,15 +16,14 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public Sprite associatedSprite;
     private Vector3 originalPosition;
+    private Bounds originalBounds;
 
-    private void Awake()
-    {
-        originalPosition = transform.localPosition;
-    }
+    private bool dragging;
 
     public void OnPointerClick(PointerEventData eventData)
     {
-        tabGroup.OnTabSelected(this);
+        if (!dragging || originalBounds.Contains(Input.mousePosition))
+            tabGroup.OnTabSelected(this);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -52,17 +51,25 @@ public class TabButton : MonoBehaviour, IPointerEnterHandler, IPointerClickHandl
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (tabGroup.displaying) return;
+        transform.position = originalBounds.Contains(Input.mousePosition) ? originalPosition : Input.mousePosition;
     }
 
     public void OnEndDrag(PointerEventData eventData)
     {
-        transform.localPosition = originalPosition;
+        dragging = false;
+        if (tabGroup.displaying) return;
+        transform.position = originalPosition;
         tabGroup.selectedSprite = null;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
+        dragging = true;
+        originalPosition = transform.position;
+        var r = (RectTransform) transform;
+        originalBounds = new Bounds(r.position, r.rect.size / 2);
+        if (tabGroup.displaying) return;
         tabGroup.selectedSprite = associatedSprite;
     }
 }

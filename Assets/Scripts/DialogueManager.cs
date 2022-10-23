@@ -20,6 +20,7 @@ public class DialogueManager : MonoBehaviour
     void Awake()
     {
         dialogueRunner.AddCommandHandler<string, string>("journal", journalRef.Add);
+        dialogueRunner.AddCommandHandler<string>("discover", journalRef.DiscoverPage);
     }
     // Update is called once per frame
     void Update()

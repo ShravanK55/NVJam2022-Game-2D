@@ -11,12 +11,7 @@ public class Journal : MonoBehaviour
 
     private Dictionary<string, List<string>> myDict = new Dictionary<string, List<string>>();
 
-    [SerializeField] private TextMeshProUGUI text1;
-    [SerializeField] private TextMeshProUGUI text2;
-    [SerializeField] private TextMeshProUGUI text3;
-    [SerializeField] private TextMeshProUGUI text4;
-    [SerializeField] private TextMeshProUGUI text5;
-    [SerializeField] private TextMeshProUGUI text6;
+    [SerializeField] private JournalPage[] pages;
     
     [SerializeField] private AudioAsset journalOpenSfx;
     [SerializeField] private AudioAsset journalCloseSfx;
@@ -45,27 +40,14 @@ public class Journal : MonoBehaviour
         {
             result += myDict[key][i];
         }
-        if (key == "Amelia")
+        foreach (var note in pages)
         {
-            text1.text = result;
-        } else if (key == "Chris")
-        {
-            text2.text = result;
-        } else if (key == "Linda")
-        {
-            text3.text = result;
-        } else if (key == "Ryan")
-        {
-            text4.text = result;
-        } else if (key == "John")
-        {
-            text5.text = result;
-        } else if (key == "Steve")
-        {
-            text6.text = result;
+            if (note.associatedPerson == key)
+            {
+                note.OverwriteNotes(result);
+                break;
+            }
         }
- 
-
     }
 
     // called when journal button is clicked
@@ -82,8 +64,14 @@ public class Journal : MonoBehaviour
         journal.SetActive(!journal.activeSelf);
     }
 
-    public void Redraw(int input)
+    public void DiscoverPage(string name)
     {
-    
+        foreach (var note in pages)
+        {
+            if (note.associatedPerson == name)
+            {
+                note.SetImage();
+            }
+        }
     }
 }
