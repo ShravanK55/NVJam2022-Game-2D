@@ -14,8 +14,6 @@ public class Journal : MonoBehaviour
     [SerializeField] private AudioAsset journalOpenSfx;
     [SerializeField] private AudioAsset journalCloseSfx;
     [SerializeField] private AudioAsset journalUpdateSfx;
-    [SerializeField] private AudioAsset choiceNoiseSfx;
-    [SerializeField] private AudioAsset talkingNoiseSfx;
 
 
     // Start is called before the first frame update
@@ -94,15 +92,4 @@ public class Journal : MonoBehaviour
         }
     }
 
-    public void MakeNoise(string a, string sfx)
-    {
-        if (sfx == "choiceNoise")
-        {
-            AudioManager.Instance.Play(choiceNoiseSfx);
-        }
-        else if (sfx == "talkingNoise")
-        {
-            AudioManager.Instance.Play(talkingNoiseSfx);
-        }
-    }
 }
