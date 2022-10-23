@@ -17,6 +17,7 @@ public class TabGroup : MonoBehaviour
     public RectTransform row1Buttons;
     public RectTransform row2Buttons;
     private bool displaying;
+    [SerializeField] private AudioAsset journalOpenSfx;
 
     public void Subscribe(TabButton button)
     {
@@ -52,6 +53,7 @@ public class TabGroup : MonoBehaviour
     
     private void DisplayTab(int index)
     {
+        AudioManager.Instance.Play(journalOpenSfx);
         if (!displaying && index >= 0 && index < objectsToSwap.Count)
         {
             var row1Midway = new Vector2(0, 300);
