@@ -3377,7 +3377,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: Amelia
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &631362285
 BoxCollider2D:
@@ -4071,7 +4071,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: Steve
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &716653503
 BoxCollider2D:
@@ -4200,7 +4200,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: Linda
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &741261352
 BoxCollider2D:
@@ -4695,7 +4695,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: Ryan
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &834501617
 BoxCollider2D:
@@ -8686,7 +8686,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: John
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &1872986164
 BoxCollider2D:
@@ -10832,7 +10832,7 @@ MonoBehaviour:
   dialogueManager: {fileID: 3361402573792110803}
   characterName: Chris
   journal: {fileID: 893251256}
-  pauseMenu: {fileID: 716037432}
+  pauseMenu: {fileID: 1285509482}
   winScreen: {fileID: 2096379382}
 --- !u!61 &2140781800
 BoxCollider2D:
