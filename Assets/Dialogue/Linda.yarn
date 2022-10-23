@@ -1,8 +1,10 @@
 ﻿title: Linda
 tags:
 ---
+<<setSpeaker Linda>>
 <<if $talkedtoChris && $talkedtoLinda>>
     I wouldn't recommend you talking to my cousin Chris. I think some foreign force...like aliens or something, possessed him. Our family has never been sporty but he's been strangely blessed with athleticism.
+    <<journal Chris "- strangely blessed with athleticism">>
 <<else>>
     Hello, what's cooking good lookings!
 <<endif>>

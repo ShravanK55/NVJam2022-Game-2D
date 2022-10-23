@@ -16,10 +16,12 @@ public class TabGroup : MonoBehaviour
     public RectTransform guestList;
     public RectTransform row1Buttons;
     public RectTransform row2Buttons;
-    private bool displaying;
+    private bool transitioningInDisplay;
+    [HideInInspector] public bool displaying;
     [SerializeField] private AudioAsset journalTabSwitchSfx;
 
     [HideInInspector] public Sprite selectedSprite;
+    [HideInInspector] public string selectedPersonName;
 
     public void Subscribe(TabButton button)
     {
@@ -33,10 +35,10 @@ public class TabGroup : MonoBehaviour
     public void OnTabEnter(TabButton button)
     {
         ResetTabs();
-        if (selectedTab == null || selectedTab != button)
-        {
-            button.background.sprite = tabHover;
-        }
+        // if (selectedTab == null || selectedTab != button)
+        // {
+        //     button.background.sprite = tabHover;
+        // }
     }
 
     public void OnTabExit(TabButton button)
@@ -48,7 +50,7 @@ public class TabGroup : MonoBehaviour
     {
         selectedTab = button;
         ResetTabs();
-        button.background.sprite = tabActive;
+        // button.background.sprite = tabActive;
         int index = button.index;
         DisplayTab(index);
     }
@@ -56,13 +58,13 @@ public class TabGroup : MonoBehaviour
     private void DisplayTab(int index)
     {
         AudioManager.Instance.Play(journalTabSwitchSfx);
-        if (!displaying && index >= 0 && index < objectsToSwap.Count)
+        if (!transitioningInDisplay && !displaying && index >= 0 && index < objectsToSwap.Count)
         {
             var row1Midway = new Vector2(0, 300);
             var row1End = new Vector2(265, 300);
             var row2Midway = new Vector2(0, 0);
             var row2End = new Vector2(400, 0);
-            float guestListEnd = 1280;
+            float guestListEnd = 760;
             DOTween.To(() => row1Buttons.anchoredPosition,
                     pos => row1Buttons.anchoredPosition = pos,
                     row1Midway, 0.15f)
@@ -88,14 +90,19 @@ public class TabGroup : MonoBehaviour
             DOTween.To(() => guestList.anchoredPosition.x,
                     x => guestList.anchoredPosition = new Vector2(x, guestList.anchoredPosition.y),
                     guestListEnd, 0.25f)
-                .SetEase(Ease.OutQuart);
-            displaying = true;
+                .SetEase(Ease.OutQuart)
+                .OnComplete(() =>
+                {
+                    displaying = true;
+                    transitioningInDisplay = false;
+                });
+            transitioningInDisplay = true;
         }
         for (int i = 0; i < objectsToSwap.Count; ++i)
         {
+            var i1 = i;
             if (i == index)
             {
-                var i1 = i;
                 objectsToSwap[i1].gameObject.SetActive(true);
                 DOTween.To(() => objectsToSwap[i1].anchoredPosition.y,
                         y => objectsToSwap[i1].anchoredPosition = new Vector2(objectsToSwap[i1].anchoredPosition.x, y),
@@ -104,7 +111,6 @@ public class TabGroup : MonoBehaviour
             }
             else
             {
-                var i1 = i;
                 DOTween.To(() => objectsToSwap[i1].anchoredPosition.y,
                         y => objectsToSwap[i1].anchoredPosition = new Vector2(objectsToSwap[i1].anchoredPosition.x, y),
                         -600, 0.2f)
@@ -119,17 +125,18 @@ public class TabGroup : MonoBehaviour
 
     public void ResetTabs()
     {
-        foreach (TabButton button in tabButtons)
-        {
-            if (selectedTab != null && selectedTab == button) { continue; }
-            button.background.sprite = tabIdle;
-        }
+        // foreach (TabButton button in tabButtons)
+        // {
+        //     if (selectedTab != null && selectedTab == button) { continue; }
+        //     button.background.sprite = tabIdle;
+        // }
     }
 
     public void ResetPositions()
     {
         DisplayTab(-1);
         displaying = false;
+        transitioningInDisplay = false;
         var row1Midway = new Vector2(0, 300);
         var row1End = new Vector2(0, 160);
         var row2Midway = new Vector2(0, 0);

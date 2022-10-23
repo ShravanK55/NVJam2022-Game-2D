@@ -1,18 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class JournalPage : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [Header("Person-specific variables")]
+    public string associatedPerson;
+    [SerializeField] private Sprite sprite;
+    
+    [Header("General journal page variables")]
+    [SerializeField] private Image image;
+    [SerializeField] private Image backgroundImage;
+    [SerializeField] private TextMeshProUGUI notesText;
+
+    public void SetImage()
     {
-        
+        image.enabled = true;
+        image.sprite = sprite;
+        backgroundImage.color = new Color(0.75f, 0.75f, 0.75f);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OverwriteNotes(string notes)
     {
-        
+        notesText.text = notes;
     }
 }
