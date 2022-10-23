@@ -229,7 +229,7 @@ PrefabInstance:
         type: 3}
       propertyPath: yarnProject
       value: 
-      objectReference: {fileID: 7545569452688597077, guid: 9050dcd1699ea1802945366ead66671e,
+      objectReference: {fileID: 7545569452688597077, guid: 5ca6b061c2e4541a0aafc679ca942e14,
         type: 3}
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c,
         type: 3}
@@ -520,6 +520,41 @@ PrefabInstance:
       propertyPath: dialogueRunner
       value: 
       objectReference: {fileID: 448696221}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[0]
+      value: Amelia
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[1]
+      value: Chris
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[2]
+      value: John
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[3]
+      value: Linda
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[4]
+      value: Ryan
+      objectReference: {fileID: 0}
+    - target: {fileID: 3361402573133318545, guid: 9ae6325a90da78f39865d67d3bfa3e33,
+        type: 3}
+      propertyPath: characterStartNodes.Array.data[5]
+      value: Steve
+      objectReference: {fileID: 0}
     - target: {fileID: 3361402573133318550, guid: 9ae6325a90da78f39865d67d3bfa3e33,
         type: 3}
       propertyPath: m_RootOrder

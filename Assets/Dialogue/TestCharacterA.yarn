@@ -1,7 +1,7 @@
 ﻿title: TestCharacterA
 tags:
 ---
-A: Hello! Welcome to the party.
+A: Yo, how's everyone doing? Where my carbs at!
 <<if $talkedToA == 0>>
 	A: What's your name?
 	<<journal "Ryan" "this is a hint">> 

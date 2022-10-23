@@ -1,0 +1,10 @@
+﻿title: Amelia
+tags:
+---
+<<if $talkedtoLinda && $talkedtoAmelia>>
+    Linda's a great friend. But...she can be a bit paranoid. She's been asking me to do her tarot readings EVERY morning. She's a really anxious person.
+<<else>>
+    Heya, omg I got here late 'cause one of my cats broke my vase JUST before I left home. Had to clean up the mess so no one gets hurt.
+<<endif>>
+<<set $talkedtoAmelia to true>>
+===
